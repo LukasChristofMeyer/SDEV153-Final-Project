@@ -9,9 +9,11 @@ header {
    align-items: baseline;
    background-color: beige;
 
-   border-bottom: 1vh;
-   border-bottom-color: black;
-   border-bottom-style: solid;
+   border: 0.5vh solid black;
+}
+
+img.logo {
+   width: 25vw;
 }
 
 header nav ul {
@@ -34,28 +36,42 @@ header nav ul a:active{color: rgb(170, 0, 0);}
 
 
 
-h2 {
-   text-decoration: underline;
-}
-
-img.logo {
-   width: 25vw;
-}
-
 img.hero-image {
    height: 90vh;
    width: 100%;
 }
 
+h1 {
+   margin: 0;
+   text-align: center;
+   border: 1vh outset black;
+   background-color: beige;
+   font-size: 5em;
+}
+
 section {
+   margin-top: 5vh;
    background-color: beige;
    display: grid; /* Make the section's divs beneath one another */
+
+   border: 0.25vw solid black;
+   border-bottom: 0.125vw solid black;
+}
+
+h2 {
+   margin: 0;
+   text-align: center;
+   border: 1vh outset black;
+   font-size: 2em;
+   text-decoration: underline;
 }
 
 div.section-division {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
+
+   border-bottom: 0.25vw outset black;
 }
 
 div.section-division div.text {
@@ -66,7 +82,8 @@ div.section-division img {
    width: 40vw;
    height: 80vh;
    margin: auto;
-   float: right;
+
+   border: 1vh groove black;
 }
 
 section img.full-image {
@@ -77,6 +94,9 @@ section img.full-image {
 }
 
 footer {
+   margin-top: 5vh;
    background-color: beige;
    text-align: center;
+
+   border: 0.5vh solid black;
 }
