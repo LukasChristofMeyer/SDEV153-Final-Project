@@ -1,0 +1,61 @@
+header {
+   display: flex;
+   flex-direction: row;
+   align-items: baseline;
+   background-color: beige;
+
+   border-bottom: 1vh;
+   border-bottom-color: black;
+   border-bottom-style: solid;
+}
+
+header nav a {
+   margin-right: 1em;
+}
+
+h2 {
+   text-decoration: underline;
+}
+
+img.logo {
+   width: 25vw;
+}
+
+img.hero-image {
+   height: 90vh;
+   width: 100%;
+}
+
+section {
+   background-color: lightgray;
+   display: grid; /* Make the section's divs beneath one another */
+}
+
+div.section-division {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+div.section-division div.text {
+   flex: 1 0 55%; /* Take up 55% of the flex to allow for an adjacent image, but fill it otherwise. */
+}
+
+div.section-division img {
+   width: 40vw;
+   height: 80vh;
+   margin: auto;
+   float: right;
+}
+
+section img.full-image {
+   height: 90vh; /* We don't want it to be too big */
+
+   flex: 1 1 100%; /* Make it so it does fill our flexbox */
+   object-fit: contain; /* But don't stretch the image! */
+}
+
+footer {
+   background-color: beige;
+   text-align: center;
+}

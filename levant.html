@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-   
+
+<!--  This is the real first .html made for the website, and is a bit of a testing ground for it.
+      Thus, look here for a tutorial / documentation on how the logic of how the website is formatted.
+      And, thus, for some fairly obvious comments! -->
+
 <head>
    <title>The Levant Exhibit</title>
    <link rel="stylesheet" href="styles.css">
@@ -18,40 +22,79 @@
    </nav>
 </header>
 
-<img class='hero-image' src='images/petra.jpg'>
-
 <main>
+   <img class='hero-image' src='images/petra.jpg'>
    <h1>The Levant Exhibit</h1>
 
-   <section>
+   <section> <!-- Each section is essentially for one <h2> -->
       <h2>Ark of the Covenant</h2>
-      <div>
-         <p>The Ark of the Covenant...</p>
+
+      <!--  A section-division is how the website expects things to be cut up,
+            That being a division including text, an optional image, and then text beneath.
+            Technically, there is no issue in repeating those three as much as you wish within one division,
+            But you should be nice and respect the logic of the division anyway! --> 
+      <div class='section-division'>
+         <div class='text'>
+            <p>The Ark of the Covenant...Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
+            sit amet, augue. Proin sodales libero eget ante</p>
+            <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in,
+            ultrices sit amet, augue. Proin sodales libero eget ante.</p>
+         </div>
+
+         <!--  Have the text div first above makes this image go on the right of it -->
          <img src='images/ark-of-the-covenant.jpg'>
-         <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-         euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
-         sit amet, augue. Proin sodales libero eget ante.</p>
+
+         <!--  And this text after the image will be fit beneath the two above as a wrap-around
+               This is needed because the image isn't floated, and only made to go right via flexbox. 
+               Automatic wrap-around will probably be added by media query later,
+               But having a forced wrap-around like this is still a nice option! -->
+         <div class='text'>
+            <p>Look, mah! new line! Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
+            sit amet, augue. Proin sodales libero eget ante.</p>
+         </div>
       </div>
-      <div>
-         <p>Do not look inside the ark!!!</p>
-         <img src='images/ark-ghosts.jpg'>
-         <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-         euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
-         sit amet, augue. Proin sodales libero eget ante.</p>
+
+      <div class='section-division'>
+         <!--  Having the image first makes it stay to the left of the following text -->
+         <img src='images/ark-of-the-covenant.jpg'>
+         <div class='text'>
+            <p>Do not look inside the ark!!!</p>
+         </div>
+
+         <!--  Another forced wrap-around, just to show it off. -->
+         <div class='text'>
+            <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
+            sit amet, augue. Proin sodales libero eget ante.</p>
+         </div>
       </div>
    </section>
    
+
    <section>
       <h2>The Holy Grail</h2>
-      <div>
-         <p>Did you know the holy grail actually exists!?</p>
-         <p>Sadly, this section doesn't have an image section, so you will have to wait until the next div to look at it!</p>
+
+      <div class='section-division'>
+         <!--  Without an accompanying image, text will fill the entire width of the flexbox -->
+         <div class='text'>
+            <p>Did you know the holy grail actually exists!?</p>
+            <p>Sadly, this section doesn't have an image section, so you will have to wait until the next div to look at it!</p>
+         </div>
       </div>
-      <div>
-         <img src='images/holy-grail.jpg'>
-         <p>Wowie, the holy grail!</p>
+
+      <div class='section-division'>
+         <!--  You can have a full-image to fill the entire width flexbox as well!
+               This is different from the hero image, because it's within a section and not the section itself -->
+         <img class='full-image' src='images/holy-grail.jpg'>
+         <div class='text'>
+            <p>Wowie, the holy grail!</p>
+         </div>
       </div>
    </section>
+
 </main>
 
 <footer>
