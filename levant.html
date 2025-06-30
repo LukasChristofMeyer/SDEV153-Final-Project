@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <!--  This is the real first .html made for the website, and is a bit of a testing ground for it.
       Thus, look here for a tutorial / documentation on how the logic of how the website is formatted.
@@ -13,17 +13,22 @@
 <body>
 
 <header>
-   <a href='index.html'>
-      <img class='logo' src='images/logo.jpg'>
+   <a href="index.html">
+      <img class="logo" src="images/logo.jpg" alt="The Museum of Cool Stuff home">
    </a>
    <nav>
-      <a href='index.html'>Home</a>
-      <a href='levant.html'>The Levant Exhibit</a>
+      <ul>
+         <a href="index.html">Home</a>
+         <a href="levant.html" aria-current="page">The Levant Exhibit</a>
+      </ul>
    </nav>
 </header>
 
 <main>
-   <img class='hero-image' src='images/petra.jpg'>
+   <!--  Although the hero image and header are not one unified section, they generally work together.
+         This is why the hero-image has no alt; its job of declaring this to be The Levant Exhibit is done by h1 -->
+   <img class="hero-image" src="images/petra.jpg">
+   <!--  They aren't unified particularly because I then wouldn't like the logic of this header -->
    <h1>The Levant Exhibit</h1>
 
    <section> <!-- Each section is essentially for one <h2> -->
@@ -33,40 +38,39 @@
             That being a division including text, an optional image, and then text beneath.
             Technically, there is no issue in repeating those three as much as you wish within one division,
             But you should be nice and respect the logic of the division anyway! --> 
-      <div class='section-division'>
-         <div class='text'>
-            <p>The Ark of the Covenant...Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+      <div class="section-division">
+         <div class="text">
+            <p>The Ark of the Covenant... Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
             euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
             sit amet, augue. Proin sodales libero eget ante</p>
-            <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+            <p>Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
             euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in,
             ultrices sit amet, augue. Proin sodales libero eget ante.</p>
          </div>
 
          <!--  Have the text div first above makes this image go on the right of it -->
-         <img src='images/ark-of-the-covenant.jpg'>
+         <img src="images/ark-of-the-covenant.jpg" 
+            alt="The Ark of The Convenant. Apparently, a humble wooden box">
+            <!-- There is some liberty taken towards the brevity of alts, as the website is semi-comical. -->
 
-         <!--  And this text after the image will be fit beneath the two above as a wrap-around
-               This is needed because the image isn't floated, and only made to go right via flexbox. 
-               Automatic wrap-around will probably be added by media query later,
-               But having a forced wrap-around like this is still a nice option! -->
-         <div class='text'>
-            <p>Look, mah! new line! Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+         <!--  This text after the image is forced as a new line. -->
+         <div class="text">
+            <p>Look, mah! new line! Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
             euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
             sit amet, augue. Proin sodales libero eget ante.</p>
          </div>
       </div>
 
-      <div class='section-division'>
+      <div class="section-division">
          <!--  Having the image first makes it stay to the left of the following text -->
-         <img src='images/ark-of-the-covenant.jpg'>
-         <div class='text'>
+         <img src="images/ark-of-the-covenant.jpg" alt="The Ark of The Convenant. Apparently, a humble wooden box">
+         <div class="text">
             <p>Do not look inside the ark!!!</p>
          </div>
 
          <!--  Another forced wrap-around, just to show it off. -->
-         <div class='text'>
-            <p>Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
+         <div class="text">
+            <p>Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
             euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
             sit amet, augue. Proin sodales libero eget ante.</p>
          </div>
@@ -77,19 +81,19 @@
    <section>
       <h2>The Holy Grail</h2>
 
-      <div class='section-division'>
+      <div class="section-division">
          <!--  Without an accompanying image, text will fill the entire width of the flexbox -->
-         <div class='text'>
+         <div class="text">
             <p>Did you know the holy grail actually exists!?</p>
-            <p>Sadly, this section doesn't have an image section, so you will have to wait until the next div to look at it!</p>
+            <p>Sadly, this section doesnt have an image section, so you will have to wait until the next div to look at it!</p>
          </div>
       </div>
 
-      <div class='section-division'>
+      <div class="section-division">
          <!--  You can have a full-image to fill the entire width flexbox as well!
                This is different from the hero image, because it's within a section and not the section itself -->
-         <img class='full-image' src='images/holy-grail.jpg'>
-         <div class='text'>
+         <img class="full-image" src="images/holy-grail.jpg" alt="The Holy Grail. An ornamental wooden goblet">
+         <div class="text">
             <p>Wowie, the holy grail!</p>
          </div>
       </div>

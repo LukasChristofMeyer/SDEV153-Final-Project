@@ -1,3 +1,8 @@
+html {
+   background-color: rgb(90%, 90%, 90%); /* Gray 90 */
+}
+
+
 header {
    display: flex;
    flex-direction: row;
@@ -9,9 +14,25 @@ header {
    border-bottom-style: solid;
 }
 
-header nav a {
+header nav ul {
+   margin-bottom: 0;
+   padding-left: 0.25em;
+}
+
+header nav ul a {
    margin-right: 1em;
 }
+
+header nav ul a:hover {color: rgb(0, 0, 119);}
+
+/* Default link colors on chrome. They are declared explicity to ensure accessibility. */
+header nav ul a:link {color: rbg(0, 0, 238);}
+header nav ul a:visited{color: rgb(85, 26, 139);}
+
+/* This was defaulted to red, but it wouldn't work against the headers beige, so it had to be darkened */
+header nav ul a:active{color: rgb(170, 0, 0);}
+
+
 
 h2 {
    text-decoration: underline;
@@ -27,7 +48,7 @@ img.hero-image {
 }
 
 section {
-   background-color: lightgray;
+   background-color: beige;
    display: grid; /* Make the section's divs beneath one another */
 }
 
