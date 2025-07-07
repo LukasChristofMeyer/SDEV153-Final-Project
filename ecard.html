@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>E-Card Creator</title>
+   <link rel="stylesheet" href="styles.css">
+
+   <script src="ecard.js" defer></script>
+</head>
+
+<body>
+
+<header>
+   <a href="index.html"><img class="logo" src="images/logo.jpg" alt="The Museum of Cool Stuff home"></a>
+   
+   <nav>
+      <ul>
+         <a href="index.html">Home</a>
+         <a href="levant.html">The Levant Exhibit</a>
+         <a href="wizard.html">The Wizard Exhibit</a>
+         <a href="ecard.html" aria-current="page">E-Card Creator</a>
+         <a href="faq.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a>
+      </ul>
+   </nav>
+   
+</header>
+
+<main>
+   <form id="cardCreator">
+      <label for="imageSelector">Image:</label>
+      <select name="imageSelector" id="imageSelector">
+         <option value="images/ark-of-the-covenant.jpg">Ark of The Covenant</option>
+         <option value="images/two-crystal-balls.jpg">Crystal Balls</option>
+         <option value="images/emerald-tablet.jpg">Emerald Tablet</option>
+         <option value="images/holy-grail.jpg">Holy Grail</option>
+         <option value="images/funky-ball.jpg">Murky Crystal Ball</option>
+         <option value="images/philosophers-stone.jpg">Philosophers Stone</option>
+      </select>
+      <br>
+      
+      <label for="reciever">To:</label>
+      <input type="text" name="reciever" id="reciever" placeholder="(Optional)">
+
+      <label for="sender">From:</label>
+      <input type="text" name="sender" id="sender" placeholder="(Optional)">
+      <br>
+
+      <label for="textArea">E-Card Text:</label>
+      <textarea id="textArea" name="textArea" rows="4" cols="20" required></textarea>
+      <br>
+
+      <input type="submit" value="Render Card">
+   </form>
+
+   <canvas id="cardCanvas" width="360" height="240" style="border: 1px solid black"></canvas>
+   <br>
+   <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button>  
+</main>
+
+<footer>
+   <p>The Very Cool Museum | 1600 Pennsylvania Ave NW, Washington, DC 20500</p>
+   <p>This website is powered by GitHub Pages!</p>
+</footer>
+
+</body>
+
+</html>
+
+<!-- Used to put on the E-Card -->
+<img id="images/ark-of-the-covenant.jpg" src="images/ark-of-the-covenant.jpg" hidden>
+<img id="images/two-crystal-balls.jpg" src="images/two-crystal-balls.jpg" hidden>
+<img id="images/emerald-tablet.jpg" src="images/emerald-tablet.jpg" hidden>
+<img id="images/holy-grail.jpg" src="images/holy-grail.jpg" hidden>
+<img id="images/funky-ball.jpg" src="images/funky-ball.jpg" hidden>
+<img id="images/philosophers-stone.jpg" src="images/philosophers-stone.jpg" hidden>

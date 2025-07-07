@@ -1,5 +1,24 @@
+* {
+   line-height: 1.5; /* Desired by the self-audit, and this is the easiest way. */
+   font-size: inherit; /* Really just a good luck charm. Forgive me; I have history! */
+}
+
 html {
    background-color: rgb(90%, 90%, 90%); /* Gray 90 */
+}
+
+body {
+/* Counter-intuitive to it's px nature to my CSS beginner brain, this scales! 
+   All it says here is "Be at least 18px. Otherwise, we don't really care, but do default to 18px." */
+   font-size: max(18px, 18px);
+}
+
+/* If it is more vertical, than it is mobile. 
+   At the very least, for all our purposes it is! I mean; this is needed when my laptop is in such a ratio as well! */
+@media(max-aspect-ratio: 3/4) {
+   body {
+      font-size: max(46px, 46px);
+   }
 }
 
 header {
@@ -71,10 +90,21 @@ div.section-division {
    flex-wrap: wrap;
 
    border-bottom: 0.25vw outset black;
+   align-items: flex-start;
 }
 
-div.section-division div.text {
+div.text {
    flex: 1 0 55%; /* Take up 50% of the flex to allow for an adjacent image, but fill it otherwise. */
+   align-self:flex-start;
+   overflow: hidden;
+
+   display: flex;
+   flex-direction:column;
+}
+
+div.text p {
+   max-width: 100%;
+   flex: 0 0 auto;
 }
 
 div.section-division img {
@@ -82,6 +112,7 @@ div.section-division img {
    max-height: 80%;
 
    border: 1vh groove black;
+   margin: auto;
 }
 
 section img.full-image {
