@@ -37,20 +37,22 @@ img.logo {
 header nav ul {
    margin-bottom: 0;
    padding-left: 0.25em;
+   list-style:none;
 }
 
-header nav ul a {
+header nav ul li {
+   display:inline-block;
    margin-right: 1em;
 }
 
-header nav ul a:hover {color: rgb(0, 0, 119);}
+header a:hover {color: rgb(0, 0, 119);}
 
 /* Default link colors on chrome. They are declared explicity to ensure accessibility. */
-header nav ul a:link {color: rbg(0, 0, 238);}
-header nav ul a:visited{color: rgb(85, 26, 139);}
+header a:link {color: rgb(0, 0, 238);}
+header a:visited{color: rgb(85, 26, 139);}
 
 /* This was defaulted to red, but it wouldn't work against the headers beige, so it had to be darkened */
-header nav ul a:active{color: rgb(170, 0, 0);}
+header a:active{color: rgb(170, 0, 0);}
 
 
 
