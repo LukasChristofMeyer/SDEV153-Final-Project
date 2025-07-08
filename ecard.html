@@ -26,6 +26,10 @@
 </header>
 
 <main>
+   <!-- There should probably be a hero image here, but I have not gotten around to it. -->
+   <section>
+
+   <h1>E-Card Creator</h1>
    <form id="cardCreator">
       <label for="imageSelector">Image:</label>
       <select name="imageSelector" id="imageSelector">
@@ -52,9 +56,15 @@
       <input type="submit" value="Render Card">
    </form>
 
-   <canvas id="cardCanvas" width="360" height="240" style="border: 1px solid black"></canvas>
-   <br>
-   <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button>  
+   <!--  I would like to make this arbitrary div be on the right, kind of like images are on other pages.
+         But that is pretty low priority to me; it would just be some nice polish. -->
+   <div>
+      <canvas id="cardCanvas" width="360" height="240" style="border: 0.2em solid black"></canvas>
+      <br>
+      <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button> 
+   </div>
+
+   </section>
 </main>
 
 <footer>

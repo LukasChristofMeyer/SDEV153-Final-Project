@@ -13,14 +13,6 @@ body {
    font-size: max(18px, 18px);
 }
 
-/* If it is more vertical, than it is mobile. 
-   At the very least, for all our purposes it is! I mean; this is needed when my laptop is in such a ratio as well! */
-@media(max-aspect-ratio: 3/4) {
-   body {
-      font-size: max(46px, 46px);
-   }
-}
-
 header {
    display: flex;
    flex-direction: row;
@@ -28,6 +20,16 @@ header {
    background-color: beige;
 
    border: 0.5vh solid black;
+}
+
+/* I apologize for this hacky div! 
+   It is how we make sure the logo is always wonderfully a logo in the header's flexbox, until I know a better way */
+div.logo-container {
+   flex: 0 0 25%
+}
+
+header a.logo {
+   display: block;
 }
 
 img.logo {
@@ -43,6 +45,7 @@ header nav ul {
 header nav ul li {
    display:inline-block;
    margin-right: 1em;
+   align-items: baseline;
 }
 
 header a:hover {color: rgb(0, 0, 119);}
@@ -96,12 +99,12 @@ div.section-division {
 }
 
 div.text {
-   flex: 1 0 55%; /* Take up 50% of the flex to allow for an adjacent image, but fill it otherwise. */
+   flex: 1 0 55%; /* Take up 55% of the flex to allow for an adjacent image, but fill it otherwise. */
    align-self:flex-start;
    overflow: hidden;
 
    display: flex;
-   flex-direction:column;
+   flex-direction: column;
 }
 
 div.text p {
@@ -130,4 +133,34 @@ footer {
    text-align: center;
 
    border: 0.5vh solid black;
+}
+
+
+/*
+   Mobile stuff below!
+*/
+
+
+/* If it is more vertical, than it is mobile. 
+   At the very least, for all our purposes it is! I mean; this is needed when my laptop is in such a ratio as well! */
+@media(max-aspect-ratio: 3/4) {
+   body {
+      font-size: max(46px, 46px);
+   }
+
+   div.text {
+      flex: 1 1 100%;
+   }
+
+   div.section-division {
+      display: grid;
+   }
+
+   div.section-division img {
+      height: 100%;
+      width: 80%;
+      display: block;
+      border: 1vh groove black;
+      margin: auto;
+   }
 }
