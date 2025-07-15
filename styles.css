@@ -104,10 +104,11 @@ div.section-division {
 }
 
 div.section-division ul {
-   display: block;
+   display: grid;
    padding: 0;
-   margin: 0;
-   list-style: none;
+   margin-top: 0;
+   gap: 0.25vh;
+   list-style: none; /* Unfortunate, but very fiddly otherwise. I really like my <p> logic for my ul */
 
    max-width: 100%;
    overflow-wrap: break-word;
