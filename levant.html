@@ -8,6 +8,9 @@
 <head>
    <title>The Levant Exhibit</title>
    <link rel="stylesheet" href="styles.css">
+
+   <meta name="description" content="The Museum of Cool Stuff's Levant Exhibit, featuring the Ark of The Covenant and the Holy Grail">
+   <meta name="keywords" content="The Museum of Cool Stuff, Museum, Levant, Holy, Ark of The Covenant, Holy Grail">
 </head>
 
 <body>
@@ -21,20 +24,17 @@
          <li><a href="levant.html" aria-current="page">The Levant Exhibit</a></li>
          <li><a href="wizard.html">The Wizard Exhibit</a></li>
          <li><a href="ecard.html">E-Card Creator</a></li>
-         <li><a href="faq.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+         <li><a href="faq.html"><abbr title="Frequently Asked Questions">FAQ</abbr> & Artifact Table</a></li>
       </ul>
    </nav>
 </header>
 
 <main>
-   <!--  Although the hero image and header are not one unified section, they generally work together.
-         This is why the hero-image has a limited alt; its job of declaring this to be The Levant Exhibit is done by h1 -->
-   <img class="hero-image" src="images/petra.jpg" alt="The Levant">
-   <!--  They aren't unified particularly because I then wouldn't like the logic of this header -->
+   <img class="hero-image" src="images/petra.jpg" alt="A large complex carved in a mountain in the levant">
    <h1>The Levant Exhibit</h1>
 
    <section> <!-- Each section is essentially for one <h2> -->
-      <h2>The Ark of the Covenant</h2>
+      <h2>The Ark of The Covenant</h2>
 
       <!--  A section-division is how the website expects things to be cut up,
             That being a division including text, an optional image, and then text beneath.
@@ -42,40 +42,31 @@
             But you should be nice and respect the logic of the division anyway! --> 
       <div class="section-division">
          <div class="text">
-            <p>The Ark of the Covenant... Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
-            sit amet, augue. Proin sodales libero eget ante</p>
-            <p>Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in,
-            ultrices sit amet, augue. Proin sodales libero eget ante.</p>
+            <p>
+               The Ark of The Covenant, also known as the Ark of God or the Ark of the Testimony, is the container of the Moses' tablets containing the ten commandments of the abrahamic religions.
+               And also Moses's holy walking stick. 
+               It was created approximately 1500 years ago with golden detailing and an ornamental seal. 
+               Carried by the Israelites through exodus, it eventually made it's way to the holy land where it passed hands until it was taken away by the Babylonians, and eventually taken here to this museum. 
+            </p>
+
+            <p>
+               Through its long history, the Ark of The Covenant has faced great decay.
+               It's commandments, (and walking stick,) have long since been taken out from it. 
+               Similarly, its golden detailing and ornamental seal have been taken, probably for money.
+               Exactly why is anybodys guess; we don't know. The current theory by experts is that those parts where sold for money, or something.
+            </p>
+
+            <p>
+               The discovery of the Ark of The Covenant despite this rough history, is remarkable.
+               In 2024, it was found in an archeological site in the very center of south-east Jordan.
+               At first it was suspected to be but an ordinary box, but on closer inspection from our great curators at the Museum of Cool Stuff it was found to actually be the Ark of The Covenant, to the wider academic world's suprise.
+            </p>
          </div>
 
          <!--  Have the text div first above makes this image go on the right of it -->
          <img src="images/ark-of-the-covenant.jpg" 
             alt="The Ark of The Convenant. Apparently, a humble wooden box">
-            <!-- There is some liberty taken towards the brevity of alts, as the website is semi-comical. -->
-
-         <!--  This text after the image is forced as a new line. -->
-         <div class="text">
-            <p>Look, mah! new line! Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
-            sit amet, augue. Proin sodales libero eget ante.</p>
-         </div>
-      </div>
-
-      <div class="section-division">
-         <!--  Having the image first makes it stay to the left of the following text -->
-         <img src="images/ark-of-the-covenant.jpg" alt="The Ark of The Convenant. Apparently, a humble wooden box">
-         <div class="text">
-            <p>Do not look inside the ark!!!</p>
-         </div>
-
-         <!--  Another forced wrap-around, just to show it off. -->
-         <div class="text">
-            <p>Filler Text: Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer
-            euismod lacus luctus magna. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices
-            sit amet, augue. Proin sodales libero eget ante.</p>
-         </div>
+            <!-- There is some liberty taken towards the brevity of alts, as the website is comedic in nature. -->
       </div>
    </section>
    
@@ -86,25 +77,41 @@
       <div class="section-division">
          <!--  Without an accompanying image, text will fill the entire width of the flexbox -->
          <div class="text">
-            <p>Did you know the holy grail actually exists!?</p>
-            <p>Sadly, this section doesnt have an image section, so you will have to wait until the next div to look at it!</p>
-         </div>
-      </div>
+            <p>
+               The Holy Grail is derived from the Holy Chalice; the vessel that Jesus used during the Last Supper.
+               There are many Holy Chalices throughout the world that claim to be that very same, such as the Nanteos Cup, the Chalice of Doña Urraca, or the Antioch Chalice.
+            </p>
 
-      <div class="section-division">
-         <!--  You can have a full-image to fill the entire width flexbox as well!
-               This is different from the hero image, because it's within a section and not the section itself -->
-         <img class="full-image" src="images/holy-grail.jpg" alt="The Holy Grail. An ornamental wooden goblet">
-         <div class="text">
-            <p>Wowie, the holy grail!</p>
+            <p>
+               However, our exhibition does not claim to have the Holy Chalice! 
+               Rather, we here at the Museum of Cool Stuff have the Holy Grail, which is totally different.
+               The Holy Grail has a long history of its own, as a magical healing item originating from old French stories from the eleventh century. 
+               These stories often centered around King Arthur of Britain, and his quests for this grail.
+               This is a testament to the Holy Grail's magical nature, as these stories seemingly predicted 800 years into the future the quest King Arthur would have in the movie Monty Python And the Holy Grail,
+               which is <a href="https://www.youtube.com/watch?v=F9B7fBPhWzU">free to watch officially on youtube.</a>
+            </p>
+
+            <p>
+               The acquisition of the Holy Grail required a similarly remarkable quest for our curators here at the Museum of Cool Stuff.
+               Despite it being the name of the movie, they never find the Holy Grail in the movie, so we did not know where to begin.
+               However, searching through the many pawn shops of the United Kingdom, we found a suspiciously ornamental cup.
+               Although not looking like anything from the movie, our diligent curators nonetheless identified it to be the Holy Grail.
+            </p>
+
+            <p>
+               This identification was helped by it somehow actually being the Holy Grail. 
+               We are not joking.
+               People who drink from this become immortal.
+            </p>
          </div>
+         <img src="images/holy-grail.jpg" alt="The Holy Grail. An ornamental wooden goblet">
       </div>
    </section>
 
 </main>
 
 <footer>
-   <p>The Very Cool Museum | 1600 Pennsylvania Ave NW, Washington, DC 20500</p>
+   <p>Disclaimer: this website is for entertainment purposes only</p>
    <p>This website is powered by GitHub Pages!</p>
 </footer>
    
