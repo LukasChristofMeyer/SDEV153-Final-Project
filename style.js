@@ -13,11 +13,8 @@ let screenWidth = screen.width;
 *  Thus, I believe this is a much to specific and contrived case to care about. No real user would get in such a situation.
 *  If you run into this whilst debugging, just refresh the page with the actual resolution you want currently enabled.
 */
-
 const baseVh = window.innerHeight * 0.01;
 const baseVw = window.innerWidth * 0.01;
-console.log(baseVh);
-console.log(baseVw);
 
 document.documentElement.style.setProperty('--base-vh', `${baseVh}px`);
 document.documentElement.style.setProperty('--base-vw', `${baseVw}px`);
