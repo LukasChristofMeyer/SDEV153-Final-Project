@@ -1,6 +1,19 @@
+:root {
+   --base-vw: 1vw;
+   --base-vh: 1vh;
+
+   --font-preferred: max(18px, calc(var(--base-vw)*4/3));
+   --h1-font-preferred: max(24px, calc(var(--base-vh)*10));
+   --h2-font-preferred: max(24px, calc(var(--base-vw)*2.6));
+
+   --font-mobile: max(46px, calc(var(--base-vw)*4/3));
+   --h1-font-mobile: max(46px, calc(var(--base-vh)*10));
+   --h2-font-mobile: max(46px, calc(var(--base-vw)*2.6));
+}
+
 * {
    line-height: 1.5; /* Desired by the self-audit, and this is the easiest way. */
-   font-size: inherit; /* Basically just a good luck charm. Forgive me; I have history! */
+   font-size: inherit; /* I believe this just a good luck charm? Forgive me; I have history! */
 }
 
 html {
@@ -8,48 +21,34 @@ html {
 }
 
 body {
-/* Counter-intuitive to it's px nature to my CSS beginner brain, this scales! 
-   All it says here is "Be at least 18px. Otherwise, we don't really care, but do default to 18px." */
-   font-size: max(18px, 18px);
+   font-size: var(--font-preferred);
 }
 
 header {
    display: flex;
    flex-direction: row;
-   align-items: baseline;
    background-color: beige;
 
    border: 0.5vh solid black;
 }
 
-/* I apologize for this hacky div! 
-   It is how we make sure the logo is always wonderfully a logo in the header's flexbox, until I know a better way */
-div.logo-container {
-   flex: 0 0 25%
-}
 
-header a.logo {
+
+header a img.logo {
    display: block;
+   align-self: start;
+   border: 0.5vh outset rgb(90, 90, 90);
+   height: 19vh;
+
+   position: sticky;
+   top: 0;
 }
 
-img.logo {
-   width: 25vw;
-}
-
-header nav ul {
-   margin-bottom: 0;
-   padding-left: 0.25em;
-   list-style:none;
-}
-
-header nav ul li {
-   display:inline-block;
-   margin-right: 1em;
-   align-items: baseline;
-}
-
-header nav ul li {
-   margin-top: 1em;
+header nav {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: self-end;
+   gap: var(--font-preferred);
 }
 
 header a:hover {color: rgb(0, 0, 119);}
@@ -64,7 +63,7 @@ header a:active{color: rgb(170, 0, 0);}
 
 
 img.hero-image {
-   height: 90vh;
+   height: 60vh;
    width: 100%;
 }
 
@@ -73,7 +72,7 @@ h1 {
    text-align: center;
    border: 1vh outset black;
    background-color: beige;
-   font-size: 5em;
+   font-size: var(--h1-font-preferred);
 }
 
 section {
@@ -89,7 +88,7 @@ h2 {
    margin: 0;
    text-align: center;
    border: 1vh outset black;
-   font-size: 2em;
+   font-size: var(--h2-font-preferred);
    text-decoration: underline;
 }
 
@@ -133,6 +132,7 @@ div.section-division table {
 
    overflow-wrap: break-word;
    word-break: break-word;
+   hyphens: auto;
 }
 
 div.text {
@@ -152,11 +152,13 @@ div.text p {
 }
 
 div.section-division img {
-   width: 40%;
-   max-height: 80vh;
+   width: 40vw;
+   height: 80vh;
 
    border: 1vh groove black;
-   margin: auto;
+
+   position: sticky;
+   top: 0;
 }
 
 section img.full-image {
@@ -182,9 +184,22 @@ footer {
 
 /* If it is more vertical, than it is mobile. 
    At the very least, for all our purposes it is! I mean; this is needed when my laptop is in such a ratio as well! */
-@media(max-aspect-ratio: 3/4) {
+@media(orientation: portrait) {
    body {
-      font-size: max(46px, 46px);
+      font-size: 48px;
+   }
+
+   h1 {
+      font-size: var(--h1-font-mobile);
+   }
+
+   h2 {
+      font-size: var(--h2-font-mobile);
+   }
+
+
+   header a img.logo {
+      width: 45vw;
    }
 
    div.text {
@@ -204,5 +219,13 @@ footer {
       margin: auto;
 
       object-fit: fill;
+
+      position: static;
+   }
+
+   table {
+      table-layout: fixed; 
+      width: 100%;
+      height: 100%;
    }
 }
