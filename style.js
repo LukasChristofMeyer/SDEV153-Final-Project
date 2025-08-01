@@ -3,60 +3,48 @@
 */
 function styleFit() {
    if (window.innerWidth / window.innerHeight > (3/4)) {
+      console.log("supper hello");
       document.querySelectorAll("div.section-division").forEach(container => {
          const text = container.querySelector("div.text");
          const img = container.querySelector("img");
-         if (!text || !img) { return; } 
-         console.log("Stuff:");
-         console.log(window.innerHeight);
-         console.log(container.offsetHeight);
-         console.log(img.offsetHeight);
+         if (!text || !img) {return;} 
 
-         if (container.offsetHeight > window.innerHeight) {
-            img.style.margin = "0";
-            img.style.position = "sticky";
-         } else {
-            img.style.position = "static";
-            img.style.margin = "auto";
-         }
+         img.style.height = "";
+         img.style.width = "";
 
-         // Safeguard against zooming in so much the image cannot fit. 
-         if ((text.offsetWidth+img.offsetWidth) > window.innerWidth) {
-            img.style.position = "static"; // This leaves it at the top automatically. 
-            img.style.height = "";
-            img.style.width = "";
-            return;
-         }
-
-         // Image should only be as high as the text accompanying it.
+         // Image should only be as tall as the text accompanying it.
          if (img.offsetHeight > text.offsetHeight) {img.style.height = text.offsetHeight + "px";}
-         else {
-            img.style.height = "";
-            img.style.width = "";
 
-            // After resetting whatever we changed, we check if the base needs to shrink, 
-            // I should probably find a more elegant solution, but this works perfectly fine.
-            if (img.offsetHeight > text.offsetHeight) {
-               img.style.height = text.offsetHeight + "px";
-            } else {
-               return;
-            }
-         }
-         
          if ((img.offsetHeight/img.offsetWidth) < (3/4)) {
             img.style.width = img.offsetHeight*(4/3) + "px";
          } else {
             img.style.width = "";
          }
+
+         if (text.offsetWidth + img.offsetWidth > container.offsetWidth) {
+            img.style.position = "static";
+            img.style.margin = "auto";
+            text.style.order = "1";
+         } else if (container.offsetHeight > window.innerHeight) {
+            img.style.marginTop = "0";
+            img.style.position = "sticky";
+            text.style.order = "";
+         } else {
+            img.style.position = "static";
+            img.style.margin = "auto";
+         }
       });
-   } else { // else the window is or less then 3/4 resolution, which we assume to be mobile
+   } else { // else the window is or less then 3/4 resolution, which we assume to be mobile.
+      // Mobile is actually covered entirely by CSS, but to be nice I've also covered the case if you've changed to 3/4.
       document.querySelectorAll("div.section-division").forEach(section => {
          const img = section.querySelector("img");
          if (!img) {return;}
          img.style.height = "";
          img.style.width = "";
+         text.style.order = "1";
       });
    }
+   return;
 }
 window.addEventListener('load', styleFit);
 window.addEventListener('resize', styleFit);

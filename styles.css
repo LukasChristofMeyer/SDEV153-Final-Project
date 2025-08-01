@@ -115,7 +115,7 @@ div.section-division ul {
 div.section-division ul li {
    max-width: 100%;
    overflow-wrap: break-word;
-   word-break: break-word;
+   word-break: break-all;
 }
 
 table, th, td {
@@ -130,7 +130,7 @@ div.section-division table {
    width: 100%;
 
    overflow-wrap: break-word;
-   word-break: break-word;
+   word-break: break-all;
    hyphens: auto;
 }
 
@@ -170,8 +170,14 @@ footer {
    border: 0.5vh solid black;
 }
 
+div.canvas-container {
+   margin-left: auto;
+   display: flex; 
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
 canvas.cardCanvas {
-   width: ;
    display: block;
 }
 
@@ -220,6 +226,11 @@ canvas.cardCanvas {
       object-fit: fill;
 
       position: static;
+      order: 1;
+   }
+
+   div.section-division div.text {
+      order: 2;
    }
 
    table {

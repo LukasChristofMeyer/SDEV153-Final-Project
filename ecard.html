@@ -28,9 +28,10 @@
 </header>
 
 <main>
+   <section> 
    <h1>E-Card Creator</h1>
+   <div class="section-division">
 
-   <section>
    <form id="cardCreator">
       <label for="imageSelector">Image:</label>
       <select name="imageSelector" id="imageSelector">
@@ -55,17 +56,27 @@
       <br>
 
       <input type="submit" value="Render Card">
+   </form>
 
-      <div>
-         <!--  The canvas's width and height is needed to be declared here, due to how javascript requires internal resolution.
-               Actual width and height style values are later redefined in ecard.js -->
-         <canvas id="cardCanvas" width="360" height="240"></canvas>
-         <br>
-         <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button> 
-      </div>
+   <div class="canvas-container">
+      <!--  The canvas's width and height is needed to be declared here, due to how javascript requires internal resolution.
+            Actual width and height style values are later redefined in ecard.js -->
+      <canvas id="cardCanvas" width="360" height="240"></canvas>
+      <br>
+      <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button> 
+   </div>
 
-   </section>  
+   </div></section>
 </main>
+
+<!--  Used to put on the E-Card. A much simpler and easier way to load them.
+      I don't know if they really should have alt codes, but the HTML validator wants them! -->
+<img id="images/ark-of-the-covenant.jpg" src="images/ark-of-the-covenant.jpg" hidden alt="The Ark of The Convenant. Apparently, a humble wooden box">
+<img id="images/two-crystal-balls.jpg" src="images/two-crystal-balls.jpg" hidden alt="A smaller crystal ball arranged before a larger crystal ball, both on a pedestal">
+<img id="images/emerald-tablet.jpg" src="images/emerald-tablet.jpg" hidden alt="The Emerald Tablet with minimal Chinese characters on it and two dragons surrounding the characters.">
+<img id="images/holy-grail.jpg" src="images/holy-grail.jpg" hidden alt="The Holy Grail. An ornamental wooden goblet">
+<img id="images/activated-crystal-ball.jpg" src="images/activated-crystal-ball.jpg" hidden alt="An activated crystal ball which no longer is crystal clear.">
+<img id="images/philosophers-stone.jpg" src="images/philosophers-stone.jpg" hidden alt="The Philosopher's Stone: a square green crystal">
 
 <footer>
    <p>Disclaimer: this website is for entertainment purposes only</p>
@@ -73,14 +84,5 @@
 </footer>
 
 </body>
-
-
-<!-- Used to put on the E-Card -->
-<img id="images/ark-of-the-covenant.jpg" src="images/ark-of-the-covenant.jpg" hidden>
-<img id="images/two-crystal-balls.jpg" src="images/two-crystal-balls.jpg" hidden>
-<img id="images/emerald-tablet.jpg" src="images/emerald-tablet.jpg" hidden>
-<img id="images/holy-grail.jpg" src="images/holy-grail.jpg" hidden>
-<img id="images/activated-crystal-ball.jpg" src="images/activated-crystal-ball.jpg" hidden>
-<img id="images/philosophers-stone.jpg" src="images/philosophers-stone.jpg" hidden>
 
 </html>

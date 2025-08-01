@@ -12,7 +12,8 @@ let selectedImage = document.querySelector("#imageSelector");
 let reciever = document.querySelector("#reciever");
 let sender = document.querySelector("#sender");
 
-canvas.style.width = "50%";
+canvas.style.width = "100%";
+canvas.style.height = "100%";
 
 
 
