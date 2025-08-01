@@ -3,7 +3,6 @@
 */
 function styleFit() {
    if (window.innerWidth / window.innerHeight > (3/4)) {
-      console.log("supper hello");
       document.querySelectorAll("div.section-division").forEach(container => {
          const text = container.querySelector("div.text");
          const img = container.querySelector("img");
