@@ -28,10 +28,9 @@
 </header>
 
 <main>
-   <!-- There should probably be a hero image here, but I have not gotten around to it. -->
-   <section>
-
    <h1>E-Card Creator</h1>
+
+   <section>
    <form id="cardCreator">
       <label for="imageSelector">Image:</label>
       <select name="imageSelector" id="imageSelector">
@@ -56,17 +55,16 @@
       <br>
 
       <input type="submit" value="Render Card">
-   </form>
 
-   <!--  I would like to make this arbitrary div be on the right, kind of like images are on other pages.
-         But that is pretty low priority to me; it would just be some nice polish. -->
-   <div>
-      <canvas id="cardCanvas" width="360" height="240" style="border: 0.2em solid black"></canvas>
-      <br>
-      <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button> 
-   </div>
+      <div>
+         <!--  The canvas's width and height is needed to be declared here, due to how javascript requires internal resolution.
+               Actual width and height style values are later redefined in ecard.js -->
+         <canvas id="cardCanvas" width="360" height="240"></canvas>
+         <br>
+         <button id="downloadButton" onclick="downloadImage()" style="display: none">Download your rendered E-Card!</button> 
+      </div>
 
-   </section>
+   </section>  
 </main>
 
 <footer>

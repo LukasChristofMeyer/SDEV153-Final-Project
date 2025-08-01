@@ -1,19 +1,17 @@
 :root {
-   --base-vw: 1vw;
-   --base-vh: 1vh;
+   --font-preferred: max(18px, 1em);
+   --h1-font-preferred: max(24px, 10vh, 3.5em); /* H1 does not zoom out due to 10vh! This is intentional; it looks good!!! */
+   --h2-font-preferred: max(24px, 2em);
 
-   --font-preferred: max(18px, calc(var(--base-vw)*4/3));
-   --h1-font-preferred: max(24px, calc(var(--base-vh)*10));
-   --h2-font-preferred: max(24px, calc(var(--base-vw)*2.6));
-
-   --font-mobile: max(46px, calc(var(--base-vw)*4/3));
-   --h1-font-mobile: max(46px, calc(var(--base-vh)*10));
-   --h2-font-mobile: max(46px, calc(var(--base-vw)*2.6));
+   --font-mobile: max(46px, 1em);
+   --h1-font-mobile: max(46px, 10vh, 3.5em);
+   --h2-font-mobile: max(46px, 2em);
 }
 
 * {
    line-height: 1.5; /* Desired by the self-audit, and this is the easiest way. */
    font-size: inherit; /* I believe this just a good luck charm? Forgive me; I have history! */
+   font-family: "Times New Roman", times;
 }
 
 html {
@@ -49,6 +47,7 @@ header nav {
    flex-wrap: wrap;
    align-items: self-end;
    gap: var(--font-preferred);
+   margin-left: var(--font-preferred);
 }
 
 header a:hover {color: rgb(0, 0, 119);}
@@ -152,20 +151,15 @@ div.text p {
 }
 
 div.section-division img {
+   /* style.js does set these to other things nearly immediately */
    width: 40vw;
-   height: 80vh;
+   height: 95vh;
 
    border: 1vh groove black;
+   margin: auto;
 
-   position: sticky;
+   position: static;
    top: 0;
-}
-
-section img.full-image {
-   height: 90vh; /* We don't want it to be too big */
-
-   flex: 1 1 100%; /* Make it so it does fill our flexbox */
-   object-fit: contain; /* But don't stretch the image! */
 }
 
 footer {
@@ -174,6 +168,11 @@ footer {
    text-align: center;
 
    border: 0.5vh solid black;
+}
+
+canvas.cardCanvas {
+   width: ;
+   display: block;
 }
 
 
