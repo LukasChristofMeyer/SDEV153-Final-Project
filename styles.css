@@ -105,17 +105,30 @@ div.section-division ul {
    display: grid;
    padding: 0;
    margin-top: 0;
-   gap: 0.25vh;
+   gap: 1em;
    list-style: none; /* Unfortunate, but very fiddly otherwise. I really like my <p> logic for my ul */
 
    max-width: 100%;
    overflow-wrap: break-word;
+
+   margin-left: 0.25em;
 }
 
 div.section-division ul li {
    max-width: 100%;
    overflow-wrap: break-word;
    word-break: break-all;
+}
+
+div.section-division ul li p { /* Assumed "Q" paragraph */
+   display: list-item;
+   list-style-type: disc;
+   margin-left: 1em;
+}
+
+div.section-division ul li p + p { /* Assumed "A" paragraph */
+   margin-left: 1em;
+   list-style-type: none;
 }
 
 table, th, td {
